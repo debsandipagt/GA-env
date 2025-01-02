@@ -3,7 +3,7 @@ env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'custom workspace environment variable'
 on: [push]
 jobs:
-  ubuntu:
+  ubuntu_02:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for ubuntu'
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
           echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
-  windows:
+  windows_02:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for windows'
     runs-on: windows-latest
